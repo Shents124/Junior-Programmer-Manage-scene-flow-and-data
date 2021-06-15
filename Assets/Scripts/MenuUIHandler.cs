@@ -30,6 +30,16 @@ public class MenuUIHandler : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void SaveColorClicked()
+    {
+        MainManager.Instance.SaveColor();
+    }
+
+    public void LoadColorClicked()
+    {
+        MainManager.Instance.LoadColor();
+        ColorPicker.SelectColor(MainManager.Instance.teamColor);
+    }
     public void Exit()
     {
     #if UNITY_EDITOR
