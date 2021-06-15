@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -26,7 +24,11 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        //Check MainManager not null
+        if (MainManager.Instance != null)
+        {
+            SetColor(MainManager.Instance.teamColor);
+        }
     }
 
     void SetColor(Color c)
